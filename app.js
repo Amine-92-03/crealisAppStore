@@ -11,5 +11,5 @@ app.get('/api',(req, res) =>{
     return res.status(200).json({data : 1})
 })
 
-app.use(express.static('../frontend'));
+app.use(express.static('./frontend'));
 module.exports = app

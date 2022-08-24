@@ -15,4 +15,5 @@ app.get('/api',(req, res) =>{
 })
 
 app.use(express.static('./frontend'));
+
 module.exports = app

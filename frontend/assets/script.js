@@ -1,7 +1,9 @@
+import InsertRecordsAPI from './apiCRM.js'
 
-console.log('in web');
 
+const apiCrm = new InsertRecordsAPI()
 
+apiCrm.insertRecords()
 
 let submiBtn = document.getElementById('submiBtn')
 submiBtn.onclick = async ()=>{
@@ -12,3 +14,11 @@ submiBtn.onclick = async ()=>{
     const json = await data.json()
     console.log(json);
 }
+
+async function connectToCRM(){
+    console.log('hello');
+}
+
+connectToCRM()
+
+

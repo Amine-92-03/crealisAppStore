@@ -1,19 +1,21 @@
-const express = require('express');
-const bodyParser = require("body-parser")
+import express  from 'express'
+import bodyParser from 'body-parser'
+import dotEnv from 'dotenv'
+import SaveContact from './zohoApi.js'
+
 const app = express()
-
-
-console.log('in app ...');
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
-require('dotenv').config()
+dotEnv.config()
 
-app.get('/api',(req, res) =>{
-    console.log('in app.get');
-    return res.status(200).json({data : 1})
+app.post('/api', async (req, res) =>{
+    let response = await SaveContact(req.body)
+    return res.status(200).json({response : response })
 })
-
 app.use(express.static('./frontend'));
 
-module.exports = app
+export default app 
+
+
+

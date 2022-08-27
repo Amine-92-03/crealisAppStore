@@ -72,20 +72,20 @@
               <form class="row g-3" id="formulaire">
                 <div class="col-md-12">
                   <label for="validationDefault01" class="form-label">Nom</label>
-                  <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                  <input type="text" class="form-control" id="validationDefault01" value="" required>
                 </div>
                 <div class="col-md-12">
                   <label for="validationDefault02" class="form-label">Prénom</label>
-                  <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                  <input type="text" class="form-control" id="validationDefault02" value="" required>
                 </div>
-                <div class="col-md">
-                  <label for="validationDefaultUsername" class="form-label">E-mail</label>
+                <div class="col-md" id="emailInput">
+                  <label for="validationDefaultUsername" class="form-label" id="emailId">E-mail</label>
                   <div class="input-group">
                     <span class="input-group-text" id="inputGroupPrepend2">@</span>
                     <input type="email" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
                   </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12" id="btnSave">
                   <button class="btn btn-primary"  type="button" id="submiBtn" >Envoyer</button>
                 </div>
               </form>

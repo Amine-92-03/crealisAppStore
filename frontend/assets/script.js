@@ -32,6 +32,21 @@ submiBtn.onclick = async ()=>{
         document.getElementById('emailId').setAttribute('style' ,'color : red;' )
     }
 }
-// submiBtn.onclick()
+
+let downloadLink = document.getElementById('btnApk')
+downloadLink.onclick = async ()=>{
+    const data = await fetch('/dowloandApk')
+    const json = await data.json()
+    let linkSource = json.data
+    let fileName = 'apps.apk'
+    let dowloandApk = document.createElement('a')
+    dowloandApk.href = linkSource
+    dowloandApk.download = fileName
+    dowloandApk.click()
+}
+
+
+
+
 
 

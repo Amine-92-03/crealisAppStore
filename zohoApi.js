@@ -12,7 +12,7 @@ async function SaveContact(data){
     
     let getToken = await fetch(urlToken, getTokenOptions)
     .then(res => res.json())
-    let urlContatct = 'https://www.zohoapis.eu/crm/v2/Leads'
+    let urlContatct = 'https://www.zohoapis.eu/crm/v2/Contacts'
     let headers = {
         Authorization : `Zoho-oauthtoken ${getToken.access_token}`
     }

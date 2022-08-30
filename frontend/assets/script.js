@@ -1,3 +1,6 @@
+import  json from './app/apkFileTest.js'
+
+
 let submiBtn = document.getElementById('submiBtn')
 submiBtn.onclick = async ()=>{
     const form = document.getElementById('formulaire')
@@ -35,8 +38,9 @@ submiBtn.onclick = async ()=>{
 
 let downloadLink = document.getElementById('btnApk')
 downloadLink.onclick = async ()=>{
-    const data = await fetch('/dowloandApk')
-    const json = await data.json()
+    // const data = await fetch('/dowloandApk')
+    // const json = await data.json()
+
     let linkSource = json.data
     let fileName = 'CerealisArMspr.apk'
     let dowloandApk = document.createElement('a')
